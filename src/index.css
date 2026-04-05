@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+
+@layer base {
+  :root {
+    --background: 225 15% 5%;
+    --foreground: 210 20% 92%;
+
+    --card: 225 12% 8%;
+    --card-foreground: 210 20% 92%;
+
+    --popover: 225 12% 8%;
+    --popover-foreground: 210 20% 92%;
+
+    --primary: 190 90% 50%;
+    --primary-foreground: 225 15% 5%;
+
+    --secondary: 260 50% 60%;
+    --secondary-foreground: 210 20% 95%;
+
+    --muted: 225 10% 13%;
+    --muted-foreground: 215 12% 50%;
+
+    --accent: 160 65% 45%;
+    --accent-foreground: 225 15% 5%;
+
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 210 20% 95%;
+
+    --border: 225 10% 14%;
+    --input: 225 10% 14%;
+    --ring: 190 90% 50%;
+
+    --radius: 0.75rem;
+
+    --glass-bg: 225 12% 10% / 0.7;
+    --glass-border: 225 10% 20% / 0.3;
+    --gradient-primary: linear-gradient(135deg, hsl(190 90% 50%), hsl(220 70% 55%));
+    --gradient-accent: linear-gradient(135deg, hsl(160 65% 45%), hsl(190 90% 50%));
+    --shadow-glow: 0 0 40px hsl(190 90% 50% / 0.1);
+    --shadow-card: 0 4px 24px hsl(0 0% 0% / 0.3);
+
+    --sidebar-background: 225 12% 8%;
+    --sidebar-foreground: 210 20% 92%;
+    --sidebar-primary: 190 90% 50%;
+    --sidebar-primary-foreground: 225 15% 5%;
+    --sidebar-accent: 225 10% 13%;
+    --sidebar-accent-foreground: 210 20% 92%;
+    --sidebar-border: 225 10% 14%;
+    --sidebar-ring: 190 90% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    min-height: 100vh;
+  }
+}
+
+@layer utilities {
+  .glass {
+    background: hsl(var(--glass-bg));
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid hsl(var(--glass-border));
+  }
+
+  .glass-strong {
+    background: hsl(225 12% 8% / 0.85);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+    border: 1px solid hsl(225 10% 18% / 0.5);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-accent-text {
+    background: var(--gradient-accent);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .glow-primary {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+}
