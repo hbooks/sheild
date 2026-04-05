@@ -68,7 +68,7 @@ export default function VerifyCard() {
         <h2 className="text-lg font-semibold tracking-tight">Verify a Photo</h2>
       </div>
       <p className="text-sm text-muted-foreground mb-6">
-        Upload an image to check for a PMEFA watermark.
+        Upload an image to check for if it is pMEFA Protected.
       </p>
 
       <DropZone onFile={verify} label="Drop an image to verify" />
@@ -87,14 +87,14 @@ export default function VerifyCard() {
             <div className="flex items-start gap-3">
               <ShieldCheck className="h-5 w-5 text-accent mt-0.5 shrink-0" />
               <div>
-                <p className="text-sm font-medium text-accent">Protected by PMEFA – AI training prohibited</p>
+                <p className="text-sm font-medium text-accent">Protected by pMEFA – AI Usage/training prohibited</p>
                 <p className="text-xs text-muted-foreground mt-1.5 font-mono break-all bg-background/50 rounded-lg p-2">{result}</p>
               </div>
             </div>
           ) : (
             <div className="flex items-center gap-3">
               <ShieldX className="h-5 w-5 text-destructive shrink-0" />
-              <p className="text-sm font-medium text-destructive">No PMEFA watermark found</p>
+              <p className="text-sm font-medium text-destructive">No pMEFA encoding found please be ware</p>
             </div>
           )}
         </div>

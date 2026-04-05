@@ -83,7 +83,7 @@ export default function ProtectCard() {
         <h2 className="text-lg font-semibold tracking-tight">Protect a Photo</h2>
       </div>
       <p className="text-sm text-muted-foreground mb-6">
-        Upload an image to embed an invisible AI opt-out watermark.
+        Upload an image to embed pMEFA protection.
       </p>
 
       {!preview ? (
@@ -109,7 +109,7 @@ export default function ProtectCard() {
 
       {downloadUrl && (
         <div className="mt-5 p-4 rounded-xl bg-accent/5 border border-accent/20">
-          <p className="text-sm text-accent font-medium mb-3">✅ Image protected successfully!</p>
+          <p className="text-sm text-accent font-medium mb-3"> Image protected successfully!</p>
           <a href={downloadUrl} download="pmefa-protected.png">
             <Button variant="outline" size="sm" className="gap-2 rounded-xl border-accent/30 text-accent hover:bg-accent/10">
               <Download className="h-4 w-4" /> Download Protected Image
